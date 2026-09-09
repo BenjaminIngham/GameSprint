@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiskora — The art of whisky.</title>
+<meta name="description" content="Whiskora writes tasting notes, distillery stories, and buying guides for people who want to understand what's in the glass, not just drink it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#171310; --bg2:#221C17; --ink:#EFE7DC; --ink-soft:#A79A88;
+  --accent:#B8842E; --accent-deep:#9A6E22; --line:#332A22; --dark:#0D0A08;
+  --font-display:'Cormorant', serif; --font-body:'Karla', sans-serif;
+  --container:1160px;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{ margin:0; font-family:var(--font-body); background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+a{ color:inherit; }
+.container{ max-width:var(--container); margin:0 auto; padding:0 28px; }
+button{ font-family:inherit; }
+img{ max-width:100%; display:block; }
+
+.site-header{ position:sticky; top:0; z-index:400; background:rgba(0,0,0,0); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); background-color:color-mix(in srgb, var(--bg) 92%, transparent); }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:18px 0; gap:20px; }
+.logo-word{ font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--ink); text-decoration:none; }
+.main-nav{ display:flex; gap:30px; list-style:none; margin:0; padding:0; }
+.main-nav a{ text-decoration:none; color:var(--ink-soft); font-size:.88rem; font-weight:600; }
+.main-nav a:hover{ color:var(--accent); }
+.header-cta{ display:inline-flex; align-items:center; padding:11px 22px; border-radius:999px; background:var(--accent); color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; }
+.header-cta:hover{ background:var(--accent-deep); }
+
+.hero{ padding:64px 0 0; }
+.hero-inner{ display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center; }
+.hero-eyebrow{ font-size:.84rem; font-weight:700; color:var(--accent); margin-bottom:16px; text-transform:uppercase; letter-spacing:.04em; }
+.hero h1{ font-family:var(--font-display); font-size:3.2rem; line-height:1.08; margin:0 0 20px; font-weight:700; }
+.hero p{ font-size:1.02rem; color:var(--ink-soft); max-width:46ch; margin:0 0 30px; }
+.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:20px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 26px; border-radius:999px; font-size:.9rem; font-weight:700; text-decoration:none; cursor:pointer; border:1.5px solid transparent; transition:transform .15s ease, background .15s ease; }
+.btn:active{ transform:scale(.97); }
+.btn-accent{ background:var(--accent); color:#fff; }
+.btn-accent:hover{ background:var(--accent-deep); }
+.btn-outline{ background:transparent; border-color:var(--line); color:var(--ink); }
+.btn-outline:hover{ border-color:var(--accent); color:var(--accent); }
+.hero-media{ border-radius:18px; overflow:hidden; aspect-ratio:1/0.95; }
+.hero-media img{ width:100%; height:100%; object-fit:cover; }
+
+.cat-strip{ padding:70px 0 10px; }
+.cat-strip h2{ font-family:var(--font-display); font-size:2rem; margin:0 0 26px; font-weight:700; }
+.offer-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+.offer-card{ background:var(--bg2); border-radius:14px; padding:26px 22px; }
+.offer-card h3{ font-family:var(--font-display); font-size:1.25rem; margin:0 0 10px; font-weight:700; }
+.offer-card p{ font-size:.86rem; color:var(--ink-soft); margin:0; line-height:1.55; }
+
+.features{ padding:76px 0; }
+.features-inner{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+.features-head h2{ font-family:var(--font-display); font-size:2rem; margin:0 0 16px; font-weight:700; }
+.features-head p{ color:var(--ink-soft); font-size:.96rem; max-width:38ch; }
+.features-list{ display:flex; flex-direction:column; gap:26px; }
+.feature-row{ display:flex; gap:18px; }
+.feature-num{ font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--accent); flex-shrink:0; padding-top:2px; }
+.feature-copy h3{ margin:0 0 6px; font-size:1.02rem; font-weight:700; }
+.feature-copy p{ margin:0; font-size:.86rem; color:var(--ink-soft); line-height:1.6; }
+
+.editorial{ padding:0 0 76px; }
+.editorial-inner{ display:grid; grid-template-columns:1fr 1fr; gap:0; border-radius:20px; overflow:hidden; background:var(--bg2); }
+.editorial-media{ aspect-ratio:1/0.85; }
+.editorial-media img{ width:100%; height:100%; object-fit:cover; }
+.editorial-copy{ padding:48px 44px; display:flex; flex-direction:column; justify-content:center; }
+.editorial-copy .hero-eyebrow{ margin-bottom:14px; }
+.editorial-copy h2{ font-family:var(--font-display); font-size:1.7rem; margin:0 0 14px; font-weight:700; }
+.editorial-copy p{ color:var(--ink-soft); font-size:.94rem; margin:0 0 24px; }
+
+.cta-section{ background:var(--dark); color:#fff; padding:66px 0; text-align:center; }
+.cta-section h2{ font-family:var(--font-display); font-size:2rem; margin:0 0 12px; font-weight:700; }
+.cta-section p{ color:rgba(255,255,255,.68); font-size:.94rem; margin:0 0 28px; }
+.cta-form{ display:flex; gap:10px; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+.cta-form input{ flex:1; min-width:220px; padding:14px 18px; border-radius:999px; border:1.5px solid rgba(255,255,255,.2); background:rgba(255,255,255,.08); color:#fff; font-size:.9rem; font-family:inherit; }
+.cta-form input::placeholder{ color:rgba(255,255,255,.5); }
+.cta-form input:focus{ outline:none; border-color:var(--accent); }
+
+.site-footer{ background:var(--bg2); padding:56px 0 26px; border-top:1px solid var(--line); }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; margin-bottom:40px; }
+.footer-brand p{ font-size:.85rem; line-height:1.7; color:var(--ink-soft); max-width:32ch; margin:14px 0 0; }
+.footer-col h5{ font-size:.8rem; font-weight:700; margin:0 0 16px; text-transform:uppercase; letter-spacing:.03em; }
+.footer-col ul{ list-style:none; margin:0; padding:0; }
+.footer-col li{ margin-bottom:10px; }
+.footer-col a{ color:var(--ink-soft); text-decoration:none; font-size:.85rem; }
+.footer-col a:hover{ color:var(--accent); }
+.footer-bottom{ border-top:1px solid var(--line); padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.78rem; color:var(--ink-soft); }
+
+/* ============ NEWSLETTER POPUP (original) ============ */
+.popup-overlay{ position:fixed; inset:0; z-index:900; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; visibility:hidden; transition:opacity .25s ease, visibility 0s linear .25s; }
+.popup-overlay.open{ opacity:1; visibility:visible; transition:opacity .25s ease, visibility 0s linear 0s; }
+.popup-modal{ background:var(--bg); border-radius:18px; max-width:420px; width:100%; overflow:hidden; position:relative; box-shadow:0 30px 70px rgba(0,0,0,.35); }
+.popup-close{ position:absolute; top:12px; right:14px; z-index:2; background:rgba(0,0,0,.35); color:#fff; border:none; width:30px; height:30px; border-radius:50%; font-size:1.2rem; cursor:pointer; line-height:1; }
+.popup-photo{ aspect-ratio:16/9; }
+.popup-photo img{ width:100%; height:100%; object-fit:cover; }
+.popup-body{ padding:26px 28px 30px; text-align:center; }
+.popup-body h2{ font-family:var(--font-display); font-size:1.4rem; margin:0 0 10px; font-weight:700; }
+.popup-body p{ font-size:.88rem; color:var(--ink-soft); margin:0 0 20px; }
+.popup-form{ display:flex; flex-direction:column; gap:10px; }
+.popup-form input{ padding:13px 16px; border-radius:10px; border:1.5px solid var(--line); font-size:.9rem; font-family:inherit; }
+.popup-form input:focus{ outline:none; border-color:var(--accent); }
+.popup-success{ font-size:.9rem; font-weight:600; color:var(--accent-deep); }
+
+/* ============ POLICY NOTICE POPUP ============ */
+.policy-notice-overlay{ position:fixed; inset:0; z-index:2147483647; background:rgba(4,6,14,.94); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; visibility:hidden; transition:opacity .25s ease, visibility 0s linear .25s; }
+.policy-notice-overlay.open{ opacity:1; visibility:visible; transition:opacity .25s ease, visibility 0s linear 0s; }
+.policy-notice-overlay.open .policy-notice-modal{ animation:policyNoticeFadeInUp .35s ease-out; }
+@keyframes policyNoticeFadeInUp{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
+.policy-notice-modal{ background:#131a30; border:1px solid rgba(255,255,255,.08); border-radius:22px; width:100%; max-width:480px; padding:38px 38px 34px; box-shadow:0 30px 70px rgba(0,0,0,.55); cursor:pointer; }
+.policy-notice-modal h2{ color:#fff; font-size:1.65rem; font-weight:700; margin:0 0 18px; line-height:1.25; }
+.policy-notice-modal p{ color:#a7aec4; font-size:1rem; line-height:1.65; margin:0 0 28px; }
+.policy-notice-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+.policy-notice-btn{ flex:1; min-width:150px; border:none; border-radius:12px; padding:15px 22px; font-size:.98rem; font-weight:600; cursor:pointer; transition:filter .15s ease, transform .15s ease; font-family:inherit; }
+.policy-notice-btn:hover{ filter:brightness(1.1); }
+.policy-notice-btn:active{ transform:scale(.98); }
+.policy-notice-btn-accept{ background:linear-gradient(135deg,#5b7dfa,#8f5cf0); color:#fff; }
+.policy-notice-btn-close{ background:rgba(255,255,255,.05); color:#e8eaf3; border:1px solid rgba(255,255,255,.16); }
+@media (max-width:480px){ .policy-notice-modal{ padding:30px 24px 26px; } .policy-notice-btn{ min-width:120px; } }
+
+@media (max-width:900px){
+  .main-nav{ display:none; }
+  .hero-inner{ grid-template-columns:1fr; }
+  .hero h1{ font-size:2.3rem; }
+  .hero-media{ order:-1; }
+  .offer-grid{ grid-template-columns:repeat(2, 1fr); }
+  .features-inner{ grid-template-columns:1fr; gap:34px; }
+  .editorial-inner{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:560px){
+  .offer-grid{ grid-template-columns:1fr; }
+  .container{ padding:0 18px; }
+  .hero h1{ font-size:1.9rem; }
+  .footer-grid{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo-word">Whiskora</a>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="#offers">Explore by region</a></li>
+        <li><a href="#features">Why readers trust Whiskora</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#offers" class="header-cta">Read Tastings</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">For the curious drinker</div>
+      <h1>The art of whisky.</h1>
+      <p>Whiskora writes tasting notes, distillery stories, and buying guides for people who want to understand what's in the glass, not just drink it.</p>
+      <div class="hero-actions">
+        <a href="#offers" class="btn btn-accent">Read Tastings</a>
+        <a href="#features" class="btn btn-outline">Why Whiskora</a>
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1695057672316-7efe5b856ab0?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Whiskora" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="cat-strip container" id="offers">
+  <h2>Explore by region</h2>
+  <div class="offer-grid">
+        <div class="offer-card">
+          <h3>Scotch</h3>
+          <p>Single malts and blends from every Scottish region.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Bourbon</h3>
+          <p>American whiskey, mash bills, and the barrels behind them.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Japanese</h3>
+          <p>The distilleries redefining what whisky can taste like.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Irish</h3>
+          <p>Triple-distilled traditions, old and new.</p>
+        </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container features-inner">
+    <div class="features-head">
+      <h2>Why readers trust Whiskora</h2>
+      <p>Whiskora writes tasting notes, distillery stories, and buying guides for people who want to understand what's in the glass, not just drink it.</p>
+    </div>
+    <div class="features-list">
+        <div class="feature-row">
+          <div class="feature-num">01</div>
+          <div class="feature-copy"><h3>Tasted, not guessed</h3><p>Every note comes from an actual bottle opened and tasted by our writers.</p></div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-num">02</div>
+          <div class="feature-copy"><h3>No score obsession</h3><p>We describe what's in the glass instead of reducing it to a number out of 100.</p></div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-num">03</div>
+          <div class="feature-copy"><h3>Buying guides that fit real budgets</h3><p>Recommendations across price points, not just the bottles PR teams send us.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="editorial container">
+  <div class="editorial-inner">
+    <div class="editorial-media"><img src="https://images.unsplash.com/photo-1671713682331-98086e7b9804?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="" loading="lazy"></div>
+    <div class="editorial-copy">
+      <div class="hero-eyebrow">For the curious drinker</div>
+      <h2>One tasting note, every week.</h2>
+      <p>A single bottle, reviewed honestly, straight to your inbox.</p>
+      <a href="#offers" class="btn btn-accent" style="align-self:flex-start;">Read Tastings</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>One tasting note, every week.</h2>
+    <p>A single bottle, reviewed honestly, straight to your inbox.</p>
+    <form class="cta-form" id="mainNewsletterForm">
+      <input type="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit" class="btn btn-accent">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo-word">Whiskora</a>
+        <p>Tasting notes, distillery stories, and buying guides for the curious drinker.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#offers">Explore by region</a></li>
+          <li><a href="#features">Why readers trust Whiskora</a></li>
+          <li><a href="#top">Home</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="mailto:hello@whiskora.co">Contact Us</a></li>
+          <li><a href="#top">About Whiskora</a></li>
+          <li><a href="#top">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Whiskora. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="popup-overlay" id="newsletterOverlay">
+  <div class="popup-modal">
+    <button type="button" class="popup-close" id="popupCloseBtn" aria-label="Close">&times;</button>
+    <div class="popup-photo"><img src="https://images.unsplash.com/photo-1649640547107-6bf197e3a30f?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="" loading="lazy"></div>
+    <div class="popup-body">
+      <h2>Before You Go — This Week's Tasting Note</h2>
+      <p>One honest whisky review in your inbox, every week.</p>
+      <form class="popup-form" id="popupForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" class="btn btn-accent">Subscribe</button>
+      </form>
+      <div class="popup-success" id="popupSuccess" style="display:none;">You're on the list — check your inbox soon.</div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var overlay = document.getElementById("newsletterOverlay");
+  var closeBtn = document.getElementById("popupCloseBtn");
+  var form = document.getElementById("popupForm");
+  var success = document.getElementById("popupSuccess");
+  function openPopup(){
+    if (!overlay || overlay.classList.contains("open")) return;
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closePopup(){
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  if (closeBtn) closeBtn.addEventListener("click", closePopup);
+  if (overlay) overlay.addEventListener("click", function(e){ if (e.target === overlay) closePopup(); });
+  if (form) form.addEventListener("submit", function(e){
+    e.preventDefault();
+    form.style.display = "none";
+    success.style.display = "block";
+    setTimeout(closePopup, 1800);
+  });
+  window.setTimeout(openPopup, 4000);
+})();
+</script>
+<script>
+document.getElementById("mainNewsletterForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var btn = this.querySelector("button");
+  btn.textContent = "Subscribed!";
+  this.querySelector("input").value = "";
+});
+</script>
+</body>
+</html>
