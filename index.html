@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrap & Soil — Composting & Zero-Waste Living</title>
+<meta name="description" content="Composting and zero-waste living guides and blog — kitchen waste reduction, vermicomposting, and practical eco swaps.">
+<link rel="canonical" href="https://www.scrapandsoil.com/">
+<meta property="og:title" content="Scrap & Soil — Composting & Zero-Waste Living">
+<meta property="og:description" content="Composting and zero-waste living guides and blog.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.scrapandsoil.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Scrap & Soil","url":"https://www.scrapandsoil.com","description":"Composting and zero-waste living guides and blog."}
+</script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#7A5A3A;--brown2:#553D28;--green:#5C7A4A;--cream:#F6F3EA;--ink:#26221A;--line:#E4DCC8;--muted:#5E5748;--panel:#EBE4D0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Karla',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Frank Ruhl Libre',serif;font-weight:600;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1160px;margin:0 auto;padding:0 24px;}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);}
+header{position:sticky;top:0;background:rgba(246,243,234,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:200;}
+.headbar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1160px;margin:0 auto;}
+.logo{font-family:'Frank Ruhl Libre';font-weight:700;font-size:1.25rem;}
+.logo span{color:var(--green);}
+nav.main-nav{display:flex;gap:26px;align-items:center;}
+nav.main-nav a{font-size:.86rem;font-weight:600;padding:6px 0;border-bottom:2px solid transparent;}
+nav.main-nav a.active,nav.main-nav a:hover{border-color:var(--brown);}
+.header-actions{display:flex;align-items:center;gap:16px;}
+.icon-btn{background:none;border:none;cursor:pointer;font-size:1.2rem;}
+#menuToggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;}
+@media(max-width:880px){nav.main-nav{position:fixed;top:65px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px;gap:4px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .25s;align-items:flex-start;}nav.main-nav.open{transform:translateY(0);}#menuToggle{display:block;}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brown2);color:#fff;padding:13px 26px;border-radius:6px;font-weight:700;font-size:.86rem;border:none;cursor:pointer;transition:.2s;}
+.btn:hover{background:#3d2c1c;}
+.btn-green{background:var(--green);color:#fff;}
+.btn-green:hover{background:#4a6339;}
+.btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink);}
+.btn-outline:hover{background:var(--ink);color:#fff;}
+.hero{padding:60px 0 30px;}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;}
+.hero h1{font-size:2.6rem;line-height:1.2;margin:14px 0 18px;}
+.hero h1 span.hl{color:var(--green);}
+.hero p.lead{font-size:1.05rem;color:var(--muted);max-width:460px;margin-bottom:26px;}
+.tag-row{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap;}
+.ctag{background:var(--panel);border-radius:6px;padding:8px 16px;font-size:.8rem;font-weight:700;color:var(--brown2);}
+.hero-img{border-radius:8px;overflow:hidden;box-shadow:0 16px 36px rgba(38,34,26,.16);}
+.hero-img img{width:100%;height:360px;object-fit:cover;}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;}.hero h1{font-size:2.1rem;}.hero-img img{height:260px;}}
+.section{padding:56px 0;}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;gap:20px;}
+.section-head h2{font-size:1.9rem;margin-top:6px;}
+.grid{display:grid;gap:24px;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.grid-3{grid-template-columns:1fr;}}
+.r-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 12px rgba(38,34,26,.06);transition:.2s;position:relative;border:1px solid var(--line);}
+.r-card:hover{transform:translateY(-4px);box-shadow:0 14px 26px rgba(38,34,26,.12);}
+.r-card img{width:100%;height:165px;object-fit:cover;background:var(--panel);}
+.r-body{padding:18px;}
+.r-cat{font-size:.68rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.05em;}
+.r-card h3{font-size:1.02rem;margin:6px 0 8px;font-weight:600;}
+.r-excerpt{font-size:.85rem;color:var(--muted);}
+.fav-btn{position:absolute;top:12px;left:12px;background:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.1);}
+.cat-band{background:var(--panel);padding:44px 0;}
+.cat-pill-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.cat-pill{background:#fff;padding:10px 18px;border-radius:6px;font-size:.85rem;font-weight:700;}
+.cat-pill:hover{background:var(--brown2);color:#fff;}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.filter-chip{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:6px;font-size:.84rem;font-weight:600;cursor:pointer;}
+.filter-chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.article-hero{padding:44px 0 0;}
+.article-hero img{width:100%;height:380px;object-fit:cover;border-radius:8px;margin-top:20px;}
+.article-body{max-width:740px;margin:0 auto;padding:20px 24px 70px;}
+.article-body h2{font-size:1.35rem;margin:30px 0 12px;}
+.article-body p{margin-bottom:16px;color:#211d16;}
+.breadcrumb{font-size:.82rem;color:var(--muted);margin-bottom:8px;}
+.breadcrumb a{color:var(--green);font-weight:700;}
+.tool-card{background:#fff;border-radius:8px;padding:28px;margin-bottom:22px;border:1px solid var(--line);}
+.tool-card h3{margin-bottom:6px;}
+.muted{color:var(--muted);font-size:.9rem;margin-bottom:16px;}
+.pill-select{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.pill-select button{background:var(--cream);border:1px solid var(--line);padding:9px 16px;border-radius:6px;cursor:pointer;font-size:.85rem;font-family:'Karla';font-weight:700;}
+.pill-select button.sel{background:var(--brown2);color:#fff;border-color:var(--brown2);}
+.result-box{background:var(--panel);border-radius:8px;padding:18px;margin-top:14px;display:none;}
+.result-box.show{display:block;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:.8rem;font-weight:700;margin-bottom:7px;}
+.form-group input,.form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-family:'Karla';background:#fff;}
+.form-error{display:none;color:#a13a1f;font-size:.85rem;margin-bottom:10px;}
+.form-success{display:none;color:#2c6b3f;font-size:.9rem;margin-top:12px;font-weight:700;}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0;}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:700;cursor:pointer;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s;color:var(--muted);font-size:.92rem;}
+.faq-item.open .faq-a{max-height:300px;padding-top:12px;}
+.faq-q span{font-size:1.3rem;transition:.2s;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.page-hero{padding:56px 0 20px;}
+.page-hero h1{font-size:2.4rem;margin:14px 0 8px;}
+.page-hero p{color:var(--muted);}
+.legal-body{max-width:760px;margin:0 auto;padding:20px 24px 80px;}
+.legal-body h2{font-size:1.1rem;margin:26px 0 10px;font-family:'Karla';font-weight:800;}
+.legal-body p{color:#211d16;margin-bottom:8px;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:20px 0 60px;}
+.about-grid img{border-radius:8px;width:100%;height:380px;object-fit:cover;}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;}
+.value-card{background:#fff;border-radius:8px;padding:24px;border:1px solid var(--line);}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;}.value-grid{grid-template-columns:1fr;}}
+footer{background:var(--brown2);color:#d9cdb6;padding:60px 0 30px;margin-top:40px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;}
+footer h4{color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;}
+footer ul{list-style:none;}
+footer ul li{margin-bottom:10px;}
+footer ul a{color:#a9987b;font-size:.9rem;}
+footer ul a:hover{color:var(--green);}
+.footer-logo{font-family:'Frank Ruhl Libre';font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:12px;}
+.footer-logo span{color:#8FAE7A;}
+.news-row{display:flex;gap:8px;margin-top:14px;}
+.news-row input{flex:1;padding:10px 12px;border-radius:6px 0 0 6px;border:none;}
+.news-row button{background:var(--green);color:#fff;border:none;padding:0 16px;border-radius:0 6px 6px 0;font-weight:700;cursor:pointer;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;font-size:.78rem;color:#7a6b52;flex-wrap:wrap;gap:10px;}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;}}
+.back-to-top{position:fixed;bottom:24px;right:24px;background:var(--green);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:.2s;font-size:1.1rem;z-index:150;}
+.back-to-top.show{opacity:1;pointer-events:auto;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--brown2);color:#fff;padding:12px 22px;border-radius:6px;font-size:.86rem;opacity:0;pointer-events:none;transition:.25s;z-index:300;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a href="/" data-link class="logo">Scrap<span>&Soil</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/" data-link>Home</a>
+      <a href="/blog" data-link>Blog</a>
+      <a href="/categories" data-link>Categories</a>
+      <a href="/tools" data-link>Tools</a>
+      <a href="/about" data-link>About</a>
+      <a href="/contact" data-link>Contact</a>
+    </nav>
+    <div class="header-actions"><button class="icon-btn" onclick="router.navigate('/favorites')" title="Saved posts">♥</button><button id="menuToggle">☰</button></div>
+  </div>
+</header>
+<div id="app"></div>
+<footer>
+  <div class="container footer-grid">
+    <div><div class="footer-logo">Scrap<span>&Soil</span></div>
+    <p style="font-size:.88rem;color:#a9987b;max-width:280px;">Composting and zero-waste living guides for a genuinely smaller footprint, one scrap at a time.</p>
+    <div class="news-row"><input type="text" id="footerNewsEmail" placeholder="Email address"><button id="footerNewsBtn">Join</button></div></div>
+    <div><h4>Blog</h4><ul id="footerCats"></ul></div>
+    <div><h4>Company</h4><ul><li><a href="/about" data-link>About</a></li><li><a href="/contact" data-link>Contact</a></li><li><a href="/tools" data-link>Tools</a></li><li><a href="/faqs" data-link>FAQs</a></li></ul></div>
+    <div><h4>Legal</h4><ul><li><a href="/privacy-policy" data-link>Privacy Policy</a></li><li><a href="/terms" data-link>Terms</a></li><li><a href="/disclaimer" data-link>Disclaimer</a></li><li><a href="/cookie-policy" data-link>Cookie Policy</a></li></ul></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Scrap & Soil · hello@scrapandsoil.com · Burlington, VT</span><span>145 Church St, Burlington, VT 05401</span></div>
+</footer>
+<button class="back-to-top" id="backToTop">↑</button>
+<div class="toast" id="toast"></div>
+<script>
+const CATS=["Composting Basics","Kitchen Waste Reduction","Zero-Waste Swaps","Troubleshooting Compost","Vermicomposting","Community & Municipal Composting"];
+const ARTICLES=[
+{slug:"composting-basics-for-beginners",title:"Composting Basics for Genuine Beginners",category:"Composting Basics",img:"https://loremflickr.com/900/600/compost,bin",excerpt:"Composting genuinely just requires understanding a few core balances.",
+body:`<p>Composting genuinely just requires understanding a few core balances between materials, not complicated equipment or expertise.</p>
+<h2>Balancing genuine greens and browns</h2>
+<p>A genuine mix of nitrogen-rich "greens" (food scraps) and carbon-rich "browns" (dry leaves, cardboard) drives effective decomposition.</p>
+<h2>Aeration genuinely speeds decomposition</h2>
+<p>Turning your genuine compost pile periodically introduces oxygen, speeding decomposition and preventing unpleasant anaerobic odors.</p>
+<h2>Moisture genuinely needs balance too</h2>
+<p>A genuinely damp-sponge moisture level, neither soggy nor dry, supports the microbial activity that actually breaks down material.</p>`},
+{slug:"what-can-and-cant-be-composted",title:"What Can (and Genuinely Can't) Be Composted",category:"Composting Basics",img:"https://loremflickr.com/900/600/kitchen,scraps",excerpt:"A few genuinely common items cause real problems in home compost.",
+body:`<p>A handful of genuinely common household items cause real problems in home compost systems and are worth avoiding.</p>
+<h2>Meat and dairy genuinely cause issues</h2>
+<p>Meat, dairy, and oily foods genuinely attract pests and produce unpleasant odors, better suited to municipal composting systems.</p>
+<h2>Diseased plants genuinely spread problems</h2>
+<p>Diseased garden plants genuinely risk spreading pathogens back into your garden when the finished compost is eventually used.</p>
+<h2>What genuinely composts well</h2>
+<p>Fruit and vegetable scraps, coffee grounds, eggshells, and yard trimmings genuinely compost well in most home systems.</p>`},
+{slug:"reducing-kitchen-food-waste",title:"Genuinely Practical Ways to Reduce Kitchen Food Waste",category:"Kitchen Waste Reduction",img:"https://loremflickr.com/900/600/kitchen,waste",excerpt:"Most food waste genuinely happens through a few identifiable habits.",
+body:`<p>Most household food waste genuinely stems from a small set of identifiable habits, each addressable with modest changes.</p>
+<h2>Planning meals genuinely before shopping</h2>
+<p>A genuine meal plan before grocery shopping reduces impulse purchases that often end up spoiling unused in the fridge.</p>
+<h2>Storing produce genuinely correctly</h2>
+<p>Genuinely correct storage — some produce in the fridge, some on the counter — meaningfully extends freshness and reduces spoilage.</p>
+<h2>Using genuine "ugly" produce first</h2>
+<p>Prioritizing genuinely imperfect or soon-to-spoil produce first prevents it from being forgotten and wasted later.</p>`},
+{slug:"simple-zero-waste-swaps",title:"Simple Zero-Waste Swaps Genuinely Worth Making",category:"Zero-Waste Swaps",img:"https://loremflickr.com/900/600/zero,waste",excerpt:"A few genuinely high-impact swaps beat trying to change everything at once.",
+body:`<p>A handful of genuinely high-impact swaps produce more sustainable change than attempting a complete lifestyle overhaul overnight.</p>
+<h2>Reusable produce bags</h2>
+<p>Genuinely simple reusable mesh produce bags eliminate a surprising amount of single-use plastic from routine grocery trips.</p>
+<h2>A genuine reusable water bottle and coffee cup</h2>
+<p>These two genuinely common daily-use items eliminate significant single-use waste with minimal lifestyle disruption.</p>
+<h2>Starting genuinely small and building habits</h2>
+<p>Adding one genuine swap at a time, letting it become habitual before adding another, sustains change better than an overwhelming overhaul.</p>`},
+{slug:"why-compost-smells-bad",title:"Why Your Compost Genuinely Smells Bad (and How to Fix It)",category:"Troubleshooting Compost",img:"https://loremflickr.com/900/600/compost,pile",excerpt:"Bad odor genuinely signals a specific, fixable imbalance.",
+body:`<p>A genuinely bad compost smell signals a specific, identifiable imbalance, not an inherent flaw in composting itself.</p>
+<h2>Too many genuine "greens" cause ammonia smell</h2>
+<p>An genuine excess of nitrogen-rich greens without enough carbon browns produces an ammonia-like smell — adding dry leaves or cardboard helps.</p>
+<h2>Too much moisture genuinely causes rot smell</h2>
+<p>A genuinely soggy, waterlogged pile smells of rot rather than earthy decomposition — adding dry material and turning it helps dry it out.</p>
+<h2>Lack of genuine aeration causes anaerobic smell</h2>
+<p>A genuinely compacted pile without enough airflow develops anaerobic bacteria, producing a distinctly unpleasant sulfur-like odor.</p>`},
+{slug:"getting-started-with-vermicomposting",title:"Getting Started With Genuine Vermicomposting",category:"Vermicomposting",img:"https://loremflickr.com/900/620/worm,composting",excerpt:"Worm composting genuinely works well in small indoor spaces.",
+body:`<p>Worm composting (vermicomposting) genuinely works well in small indoor or apartment spaces where traditional outdoor piles aren't possible.</p>
+<h2>Choosing genuinely the right worm species</h2>
+<p>Red wiggler worms are genuinely the standard choice for vermicomposting, well-suited to the confined bin environment.</p>
+<h2>Feeding genuinely small, regular amounts</h2>
+<p>Overfeeding is a genuinely common beginner mistake — small, regular scrap additions work better than large infrequent dumps.</p>
+<h2>Harvesting genuine worm castings</h2>
+<p>Finished worm castings make genuinely excellent, nutrient-rich fertilizer for houseplants or garden beds.</p>`},
+{slug:"finding-municipal-composting-programs",title:"Finding and Using Municipal Composting Programs",category:"Community & Municipal Composting",img:"https://loremflickr.com/900/620/municipal,composting",excerpt:"Municipal programs genuinely accept materials home composting can't.",
+body:`<p>Municipal composting programs genuinely accept meat, dairy, and other materials that home composting systems typically can't handle well.</p>
+<h2>Checking genuine local availability</h2>
+<p>Many genuine cities now offer curbside or drop-off composting — checking your local municipal website reveals what's available.</p>
+<h2>Understanding genuine accepted materials</h2>
+<p>Municipal programs genuinely vary in what they accept — checking specific local guidelines avoids contaminating a collection batch.</p>
+<h2>Community gardens as a genuine alternative</h2>
+<p>Local community gardens genuinely sometimes accept compost drop-off even without an official municipal program in place.</p>`},
+{slug:"composting-in-an-apartment",title:"Composting Genuinely Without a Backyard",category:"Composting Basics",img:"https://loremflickr.com/920/620/apartment,composting",excerpt:"Apartment living genuinely doesn't rule out composting entirely.",
+body:`<p>Apartment living genuinely doesn't rule out composting — several real options exist for those without outdoor space.</p>
+<h2>Countertop electric composters</h2>
+<p>Electric countertop composters genuinely process scraps quickly indoors, though they produce a soil amendment rather than true finished compost.</p>
+<h2>Vermicomposting genuinely suits small spaces</h2>
+<p>A worm bin genuinely fits under a sink or in a closet, a practical option for apartment dwellers without outdoor access.</p>
+<h2>Drop-off programs genuinely offer a no-equipment option</h2>
+<p>Community drop-off composting programs genuinely eliminate the need for any equipment at all, just regular scrap transport.</p>`},
+{slug:"reducing-plastic-in-daily-life",title:"Genuinely Reducing Plastic Without Overhauling Your Life",category:"Zero-Waste Swaps",img:"https://loremflickr.com/900/620/plastic,reduction",excerpt:"Targeting genuinely high-frequency plastic use matters more than eliminating everything.",
+body:`<p>Targeting genuinely high-frequency, single-use plastic items matters more for real impact than trying to eliminate all plastic at once.</p>
+<h2>Identifying genuine biggest sources first</h2>
+<p>Tracking a genuine week of plastic use reveals your actual biggest sources, letting you target real high-impact changes first.</p>
+<h2>Bulk buying genuinely reduces packaging</h2>
+<p>Buying genuinely in bulk where available reduces packaging waste significantly compared to smaller, individually wrapped portions.</p>
+<h2>Accepting genuine imperfection</h2>
+<p>A genuinely imperfect but consistent effort produces more real impact than an all-or-nothing approach that leads to burnout.</p>`},
+{slug:"understanding-compost-carbon-nitrogen-ratio",title:"Understanding the Genuine Carbon-to-Nitrogen Ratio",category:"Composting Basics",img:"https://loremflickr.com/900/620/compost,ratio",excerpt:"This ratio genuinely determines how well your pile decomposes.",
+body:`<p>The carbon-to-nitrogen ratio genuinely determines how effectively and quickly your compost pile actually decomposes.</p>
+<h2>A genuine rough target ratio</h2>
+<p>A genuine rough target of roughly 25-30 parts carbon to 1 part nitrogen by weight supports efficient decomposition for most home piles.</p>
+<h2>Identifying genuine carbon and nitrogen sources</h2>
+<p>Dry leaves and cardboard genuinely serve as carbon, while food scraps and grass clippings genuinely serve as nitrogen sources.</p>
+<h2>Adjusting genuinely based on pile behavior</h2>
+<p>A genuinely slow-decomposing pile often needs more nitrogen, while a smelly pile often needs more carbon added.</p>`},
+{slug:"what-to-do-with-finished-compost",title:"What to Genuinely Do With Finished Compost",category:"Composting Basics",img:"https://loremflickr.com/900/620/finished,compost",excerpt:"Finished compost genuinely has more uses than just garden beds.",
+body:`<p>Finished compost genuinely has more practical uses than just amending traditional outdoor garden beds.</p>
+<h2>Amending genuine potting soil</h2>
+<p>Mixing finished compost genuinely into potting soil boosts nutrients for container and houseplants, not just outdoor gardens.</p>
+<h2>Top-dressing genuine lawns</h2>
+<p>A thin genuine layer of compost spread over lawn areas improves soil health without needing synthetic fertilizer.</p>
+<h2>Sharing genuine surplus with neighbors</h2>
+<p>Genuine surplus compost, more than you can use yourself, is often genuinely welcomed by neighbors or local community gardens.</p>`},
+{slug:"composting-myths-debunked",title:"Common Composting Myths, Genuinely Debunked",category:"Troubleshooting Compost",img:"https://loremflickr.com/900/620/compost,myths",excerpt:"A few genuinely persistent myths discourage people from starting.",
+body:`<p>A handful of genuinely persistent myths discourage people from starting composting who would otherwise find it manageable.</p>
+<h2>Myth: composting genuinely requires a lot of space</h2>
+<p>Vermicomposting and countertop systems genuinely prove that meaningful composting doesn't require a large backyard setup.</p>
+<h2>Myth: compost always genuinely smells bad</h2>
+<p>A genuinely well-balanced, properly maintained compost pile smells earthy, not foul — bad smell signals a fixable imbalance, not a given.</p>
+<h2>Myth: composting genuinely attracts pests</h2>
+<p>Avoiding genuine problem materials like meat and maintaining proper balance meaningfully reduces pest attraction in most systems.</p>`}
+];
+let favorites=JSON.parse(localStorage.getItem('ssoil_favorites')||'[]');
+function saveFavorites(){localStorage.setItem('ssoil_favorites',JSON.stringify(favorites));}
+function toggleFav(slug,e){if(e)e.stopPropagation();const i=favorites.indexOf(slug);if(i>-1)favorites.splice(i,1);else favorites.push(slug);saveFavorites();render();}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+function articleCard(a){
+  const isFav=favorites.includes(a.slug);
+  return `<a href="/post/${a.slug}" data-link class="r-card" style="display:block;">
+    <button class="fav-btn" onclick="toggleFav('${a.slug}',event)">${isFav?'♥':'♡'}</button>
+    <img class="lazy" data-src="${a.img}" alt="${a.title}">
+    <div class="r-body"><span class="r-cat">${a.category}</span><h3>${a.title}</h3><p class="r-excerpt">${a.excerpt}</p></div>
+  </a>`;
+}
+function pageHome(){
+  const featured=ARTICLES.slice(0,3);
+  return `<section class="hero container"><div class="hero-grid">
+  <div><span class="eyebrow">Composting & Zero-Waste</span>
+  <h1>Waste that's genuinely <span class="hl">put to good use</span>.</h1>
+  <p class="lead">Composting and zero-waste living guides and blog — kitchen waste reduction, vermicomposting, and practical eco swaps.</p>
+  <div style="display:flex;gap:14px;"><a href="/blog" data-link class="btn">Browse the Blog</a><a href="/tools" data-link class="btn btn-outline">Try the Tools</a></div>
+  <div class="tag-row"><span class="ctag">🍂 Composting basics</span><span class="ctag">🥕 Kitchen waste reduction</span><span class="ctag">🪱 Vermicomposting</span></div></div>
+  <div class="hero-img"><img class="lazy" data-src="https://loremflickr.com/800/700/compost,garden" alt="Home compost bin in garden"></div></div></section>
+  <section class="cat-band"><div class="container"><div class="cat-pill-row">${CATS.map(c=>`<a href="/category/${encodeURIComponent(c)}" data-link class="cat-pill">${c}</a>`).join('')}</div></div></section>
+  <section class="section container"><div class="section-head"><div><span class="eyebrow">Fresh posts</span><h2>Latest From Scrap & Soil</h2></div><a href="/blog" data-link class="btn btn-outline">All Posts</a></div>
+  <div class="grid grid-3">${featured.map(articleCard).join('')}</div></section>
+  <section class="section container" style="background:var(--brown2);border-radius:8px;padding:44px;color:#fff;">
+  <div style="max-width:600px;"><span class="eyebrow" style="color:#8FAE7A;">Free Tool</span>
+  <h2 style="margin:10px 0 8px;color:#fff;">Which Composting Method Genuinely Fits You?</h2>
+  <p style="margin-bottom:18px;opacity:.85;">Pick your living situation for a method recommendation.</p>
+  <a href="/tools" data-link class="btn btn-green">Find My Method</a></div></section>`;
+}
+function pageBlog(cat){
+  const list=cat?ARTICLES.filter(a=>a.category===cat):ARTICLES;
+  return `<section class="page-hero container"><span class="eyebrow">Blog</span><h1>${cat||'All Composting & Zero-Waste Posts'}</h1><p>${list.length} post${list.length!==1?'s':''}</p></section>
+  <section class="container" style="padding-bottom:70px;">
+    <div class="filter-row" id="catFilters"><button class="filter-chip ${!cat?'active':''}" data-cat="">All</button>${CATS.map(c=>`<button class="filter-chip ${cat===c?'active':''}" data-cat="${c}">${c}</button>`).join('')}</div>
+    <div class="grid grid-3" id="guideResults">${list.map(articleCard).join('')}</div></section>`;
+}
+function pageCategories(){
+  return `<section class="page-hero container"><span class="eyebrow">Explore</span><h1>Categories</h1></section>
+  <section class="container" style="padding-bottom:70px;"><div class="grid grid-3">
+  ${CATS.map(c=>{const n=ARTICLES.filter(a=>a.category===c).length;return `<a href="/category/${encodeURIComponent(c)}" data-link class="r-card" style="display:block;padding:26px;"><h3>${c}</h3><p class="r-excerpt" style="margin-top:8px;">${n} post${n!==1?'s':''}</p></a>`;}).join('')}
+  </div></section>`;
+}
+function pageArticle(slug){
+  const a=ARTICLES.find(x=>x.slug===slug); if(!a) return page404();
+  const isFav=favorites.includes(a.slug);
+  const related=ARTICLES.filter(x=>x.category===a.category&&x.slug!==a.slug).slice(0,3);
+  return `<section class="article-hero container"><div class="breadcrumb"><a href="/" data-link>Home</a> / <a href="/blog" data-link>Blog</a> / ${a.title}</div>
+   <span class="eyebrow">${a.category}</span><h1 style="font-size:2rem;margin:12px 0;">${a.title}</h1>
+   <button class="btn btn-outline" onclick="toggleFav('${a.slug}',event);document.getElementById('favLabel').textContent=favorites.includes('${a.slug}')?'Saved ♥':'Save Post ♡'"><span id="favLabel">${isFav?'Saved ♥':'Save Post ♡'}</span></button>
+   <img class="lazy" data-src="${a.img}" alt="${a.title}"></section>
+  <section class="article-body">${a.body}</section>
+  ${related.length?`<section class="container" style="padding-bottom:70px;"><h2 style="margin-bottom:20px;">More in ${a.category}</h2><div class="grid grid-3">${related.map(articleCard).join('')}</div></section>`:''}`;
+}
+function pageFavorites(){
+  const items=ARTICLES.filter(a=>favorites.includes(a.slug));
+  return `<section class="page-hero container"><span class="eyebrow">Saved</span><h1>Your Saved Posts</h1></section>
+  <section class="container" style="padding-bottom:70px;">${items.length?`<div class="grid grid-3">${items.map(articleCard).join('')}</div>`:`<p style="color:var(--muted);text-align:center;padding:40px 0;">No saved posts yet — tap the heart on any post to save it here.</p>`}</section>`;
+}
+function pageTools(){
+  return `<section class="page-hero container"><span class="eyebrow">Plan</span><h1>Composting Tools</h1><p>Two tools to help you get started.</p></section>
+  <section class="container" style="padding-bottom:70px;">
+    <div class="tool-card"><h3>Composting Method Finder</h3><p class="muted">Pick your living situation for a method recommendation.</p><div id="methodArea"></div></div>
+    <div class="tool-card"><h3>Green/Brown Balance Checker</h3><p class="muted">Pick your compost's issue for a fix.</p><div id="balanceArea"></div></div></section>`;
+}
+function pageAbout(){
+  return `<section class="page-hero container"><span class="eyebrow">Our Story</span><h1>About Scrap & Soil</h1></section>
+  <section class="container about-grid"><div><p style="margin-bottom:16px;color:#211d16;">Scrap & Soil started with a genuinely smelly first compost pile and a decision to actually understand the science behind good decomposition. We write guides grounded in real trial and error, not idealized zero-waste perfection.</p>
+  <p style="margin-bottom:16px;color:#211d16;">Every guide reflects genuine hands-on composting across different setups.</p></div>
+  <img class="lazy" data-src="https://loremflickr.com/800/900/composting,garden" alt="Composting in a home garden"></section>
+  <section class="container" style="padding-bottom:70px;"><div class="value-grid">
+    <div class="value-card"><h4>Genuinely realistic advice</h4><p style="color:var(--muted);font-size:.92rem;">We don't demand zero-waste perfection.</p></div>
+    <div class="value-card"><h4>Science-based troubleshooting</h4><p style="color:var(--muted);font-size:.92rem;">We explain the why behind compost issues.</p></div>
+    <div class="value-card"><h4>Space-inclusive guidance</h4><p style="color:var(--muted);font-size:.92rem;">We cover options for yards and apartments alike.</p></div>
+  </div></section>`;
+}
+function pageContact(){
+  return `<section class="page-hero container"><span class="eyebrow">Reach Us</span><h1>Contact</h1></section>
+  <section class="container" style="padding-bottom:70px;max-width:600px;">
+    <form id="contactForm" novalidate>
+      <div class="form-group"><label>Name</label><input type="text" id="cName" required></div>
+      <div class="form-group"><label>Email</label><input type="email" id="cEmail" required></div>
+      <div class="form-group"><label>Message</label><textarea rows="5" id="cMessage" required></textarea></div>
+      <div class="form-error" id="contactError">Please complete all fields with a valid email.</div>
+      <button type="submit" class="btn">Send Message</button>
+      <div class="form-success" id="contactSuccess">Thanks — we'll respond within one business day.</div>
+    </form>
+    <div style="margin-top:36px;color:var(--muted);font-size:.9rem;"><p><strong>Email:</strong> hello@scrapandsoil.com</p><p><strong>Phone:</strong> +1 (802) 555-0134</p><p><strong>Studio:</strong> 145 Church St, Burlington, VT 05401</p></div>
+  </section>`;
+}
+function pageFaqs(){
+  const faqs=[
+    {q:"Can I genuinely compost without a backyard?",a:"Yes — vermicomposting, countertop electric composters, and municipal drop-off programs all genuinely work without outdoor space."},
+    {q:"Why does my compost genuinely smell bad?",a:"This usually signals an imbalance — too many greens, too much moisture, or not enough aeration are the most common genuine causes."},
+    {q:"Can I compost meat and dairy at home?",a:"Generally no — these genuinely attract pests and cause odor in home systems. Municipal composting programs typically accept them instead."},
+    {q:"Can I submit my own composting or zero-waste tip?",a:"Yes — email hello@scrapandsoil.com with your tip for consideration in a future post."},
+    {q:"Is my favorites list saved if I close the browser?",a:"Yes, your saved posts are stored locally in your browser and will still be there next time you visit on the same device."}
+  ];
+  return `<section class="page-hero container"><span class="eyebrow">Help</span><h1>FAQs</h1></section>
+  <section class="container" style="padding-bottom:70px;max-width:740px;">${faqs.map(f=>`<div class="faq-item"><div class="faq-q">${f.q}<span>+</span></div><div class="faq-a">${f.a}</div></div>`).join('')}</section>`;
+}
+function legalWrap(t,e,c){return `<section class="page-hero container"><span class="eyebrow">Legal</span><h1>${t}</h1><p>${e}</p></section><section class="legal-body">${c}</section>`;}
+function pagePrivacy(){return legalWrap("Privacy Policy","Effective July 1, 2026 · Last updated July 1, 2026",`
+<h2>1. Overview</h2><p>Scrap & Soil ("we," "our," "us") respects your privacy. This policy explains what information we collect through scrapandsoil.com (the "Site"), why, and the choices available to you.</p>
+<h2>2. Information We Collect</h2><p>We collect your name and email when you subscribe to our newsletter or submit a contact form, plus cookieless, aggregate, non-identifying analytics data.</p>
+<h2>3. How We Use Your Information</h2><p>We use collected information to respond to inquiries, deliver opted-in newsletter content, and understand aggregate site usage. We do not sell personal information to third parties.</p>
+<h2>4. Local Storage</h2><p>Saved posts and tool results are stored locally in your browser using localStorage and are never transmitted to our servers.</p>
+<h2>5. Information Sharing</h2><p>We do not sell or rent personal information. We may share limited data with service providers, such as email delivery platforms, bound to use it only to provide services to us.</p>
+<h2>6. Data Security</h2><p>We use reasonable safeguards to protect information you provide, though no method of internet transmission is completely secure.</p>
+<h2>7. Data Retention</h2><p>Newsletter and contact submissions are retained until you unsubscribe or request deletion.</p>
+<h2>8. Children's Privacy</h2><p>The Site is not directed to children under 13, and we do not knowingly collect information from children.</p>
+<h2>9. Your Rights</h2><p>Email hello@scrapandsoil.com to request access, correction, or deletion of your data. Depending on your location, you may have additional rights under laws such as the CCPA or GDPR.</p>
+<h2>10. International Visitors</h2><p>The Site is operated from the United States. If you access the Site from outside the U.S., your information may be processed in the U.S., where data protection laws may differ from those in your jurisdiction.</p>
+<h2>11. Changes to This Policy</h2><p>We may update this policy periodically; material changes will be reflected by a revised effective date above.</p>
+<h2>12. Contact Us</h2><p>Questions can be sent to hello@scrapandsoil.com or 145 Church St, Burlington, VT 05401.</p>`);}
+function pageTerms(){return legalWrap("Terms & Conditions","Effective July 1, 2026 · Last updated July 1, 2026",`
+<h2>1. Acceptance of Terms</h2><p>By using scrapandsoil.com you agree to these Terms & Conditions.</p>
+<h2>2. Eligibility</h2><p>The Site is intended for general audiences of any age; younger users should access the Site under parental supervision.</p>
+<h2>3. Use of the Site</h2><p>You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of, or restrict the use of, the Site by others.</p>
+<h2>4. Content Use</h2><p>Posts, text, and photography are property of Scrap & Soil unless credited otherwise; do not republish full posts without written permission, though linking to our pages is always welcome.</p>
+<h2>5. No Professional Guarantee</h2><p>Our content offers general composting and sustainability education and is not a substitute for professional environmental or municipal waste guidance.</p>
+<h2>6. Tools</h2><p>Our recommendation tools provide general suggestions only and are not a substitute for individualized guidance.</p>
+<h2>7. User Conduct</h2><p>You agree not to misuse the Site, attempt unauthorized access, or use automated means to scrape Site content.</p>
+<h2>8. Third-Party Links</h2><p>We are not responsible for the content or practices of any third-party site linked from ours.</p>
+<h2>9. Disclaimer of Warranties</h2><p>The Site and its content are provided "as is" without warranties of any kind, express or implied.</p>
+<h2>10. Limitation of Liability</h2><p>Scrap & Soil is not liable for indirect or consequential damages arising from reliance on Site content, to the fullest extent permitted by law.</p>
+<h2>11. Governing Law</h2><p>These Terms are governed by the laws of the State of Vermont, USA.</p>
+<h2>12. Changes to These Terms</h2><p>Continued use of the Site after changes are posted constitutes acceptance of the revised Terms.</p>
+<h2>13. Contact Us</h2><p>Questions can be sent to hello@scrapandsoil.com.</p>`);}
+function pageDisclaimer(){return legalWrap("Disclaimer","Effective July 1, 2026 · Last updated July 1, 2026",`
+<h2>1. General Disclaimer</h2><p>Content is provided for general informational purposes only, in good faith, without warranty of any kind regarding accuracy or completeness.</p>
+<h2>2. Local Regulation Disclaimer</h2><p>Municipal composting rules and accepted materials vary significantly by location; always verify current local guidelines before participating in a program.</p>
+<h2>3. Individual Result Variation Disclaimer</h2><p>Composting outcomes vary based on climate, materials, and technique; our guides offer general, not universal, guidance.</p>
+<h2>4. Tool Accuracy Disclaimer</h2><p>Our recommendation tools offer general starting-point suggestions and may not account for every individual's specific situation.</p>
+<h2>5. Affiliate Disclosure</h2><p>Some content may include affiliate-style links; this never influences our recommendations.</p>
+<h2>6. External Links</h2><p>We are not responsible for the content or practices of any third-party site linked from ours.</p>
+<h2>7. Limitation of Liability</h2><p>Scrap & Soil is not liable for loss or damage arising from use of, or reliance on, this Site, to the fullest extent permitted by law.</p>`);}
+function pageCookies(){return legalWrap("Cookie Policy","Effective July 1, 2026 · Last updated July 1, 2026",`
+<h2>1. What Are Cookies</h2><p>Cookies are small text files placed on your device, typically used to remember preferences or track behavior across sessions and sites.</p>
+<h2>2. Do We Use Cookies</h2><p>We use a cookieless, privacy-first analytics service. No tracking or advertising cookies are set on this Site.</p>
+<h2>3. Our Analytics Service</h2><p>Our analytics provider reports only aggregate, anonymized traffic patterns and cannot track individuals across sessions or websites.</p>
+<h2>4. Local Storage</h2><p>Saved posts and tool results use your browser's localStorage only and remain on your device.</p>
+<h2>5. Third-Party Services</h2><p>Article images are served from a third-party image provider, which may log standard server request data as part of normal web infrastructure.</p>
+<h2>6. Managing Your Preferences</h2><p>Clearing your browser's site data will reset your saved posts. No cookie consent banner is required since we do not use tracking cookies.</p>
+<h2>7. Do Not Track</h2><p>Because we do not track individuals across sessions, "Do Not Track" signals have no additional effect on this Site.</p>
+<h2>8. Changes to This Policy</h2><p>Updates to this policy will be posted here with a revised effective date.</p>`);}
+function page404(){return `<section class="page-hero container" style="padding-top:100px;"><h1>Page Not Found</h1><p>Let's get you back on track.</p><br><a href="/" data-link class="btn">Return Home</a></section>`;}
+function renderMethodFinder(){
+  const area=document.getElementById('methodArea'); if(!area) return;
+  area.innerHTML=`<div class="pill-select" id="methodPills">${["I have a yard","Apartment, no outdoor space","Somewhere in between"].map(s=>`<button data-sit="${s}">${s}</button>`).join('')}</div><div class="result-box" id="methodResult"></div>`;
+  const data={"I have a yard":"A traditional outdoor compost pile or bin genuinely works well and handles the widest range of materials.","Apartment, no outdoor space":"Vermicomposting or a countertop electric composter genuinely fits well without any outdoor access needed.","Somewhere in between":"A small tumbler-style compost bin genuinely works on a patio or balcony without needing a full yard."};
+  area.querySelectorAll('[data-sit]').forEach(btn=>btn.addEventListener('click',()=>{
+    area.querySelectorAll('[data-sit]').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');
+    document.getElementById('methodResult').innerHTML=data[btn.dataset.sit];document.getElementById('methodResult').classList.add('show');
+  }));
+}
+function renderBalanceChecker(){
+  const area=document.getElementById('balanceArea'); if(!area) return;
+  area.innerHTML=`<div class="pill-select" id="balancePills">${["Smells bad","Not decomposing","Too dry"].map(s=>`<button data-issue="${s}">${s}</button>`).join('')}</div><div class="result-box" id="balanceResult"></div>`;
+  const data={"Smells bad":"This genuinely signals too many greens, too much moisture, or not enough aeration — add dry browns and turn the pile.","Not decomposing":"This often genuinely means too much carbon (browns) relative to nitrogen — add more greens like food scraps.","Too dry":"Add genuine moisture, roughly to a damp-sponge consistency, and turn the pile to redistribute it evenly."};
+  area.querySelectorAll('[data-issue]').forEach(btn=>btn.addEventListener('click',()=>{
+    area.querySelectorAll('[data-issue]').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');
+    document.getElementById('balanceResult').innerHTML=data[btn.dataset.issue];document.getElementById('balanceResult').classList.add('show');
+  }));
+}
+const routes=[
+  {path:'/',render:pageHome},{path:'/blog',render:()=>pageBlog()},{path:'/categories',render:pageCategories},
+  {path:'/tools',render:pageTools},{path:'/about',render:pageAbout},{path:'/contact',render:pageContact},
+  {path:'/faqs',render:pageFaqs},{path:'/favorites',render:pageFavorites},
+  {path:'/privacy-policy',render:pagePrivacy},{path:'/terms',render:pageTerms},{path:'/disclaimer',render:pageDisclaimer},{path:'/cookie-policy',render:pageCookies},
+];
+const isFileProto=location.protocol==='file:';
+function getPath(){return isFileProto?(location.hash.slice(1)||'/'):location.pathname;}
+const router={navigate(p){if(isFileProto){location.hash=p;}else{history.pushState({},'',p);}render();window.scrollTo(0,0);}};
+document.addEventListener('error',function(e){
+  const img=e.target;
+  if(!img||img.tagName!=='IMG'||img.dataset.fallbackApplied) return;
+  img.dataset.fallbackApplied='1';
+  const m=(img.src||img.dataset.src||'').match(/\/(\d+)\/(\d+)\//);
+  const w=m?m[1]:800, h=m?m[2]:600;
+  const seed=encodeURIComponent(img.alt||Math.random().toString(36).slice(2));
+  img.src='https://picsum.photos/seed/'+seed+'/'+w+'/'+h;
+},true);
+document.addEventListener('click',e=>{const l=e.target.closest('[data-link]');if(l){e.preventDefault();router.navigate(l.getAttribute('href'));}});
+window.addEventListener(isFileProto?'hashchange':'popstate',render);
+function match(path){
+  if(path.startsWith('/post/')) return {render:()=>pageArticle(path.split('/post/')[1])};
+  if(path.startsWith('/category/')) return {render:()=>pageBlog(decodeURIComponent(path.split('/category/')[1]))};
+  return routes.find(r=>r.path===path)||{render:page404};
+}
+function lazyLoad(){
+  const imgs=document.querySelectorAll('img.lazy[data-src]');
+  const io=new IntersectionObserver((entries,obs)=>{entries.forEach(en=>{if(en.isIntersecting){en.target.src=en.target.dataset.src;en.target.removeAttribute('data-src');obs.unobserve(en.target);}});});
+  imgs.forEach(img=>io.observe(img));
+}
+function attachHandlers(){
+  const filters=document.getElementById('catFilters');
+  if(filters){filters.querySelectorAll('.filter-chip').forEach(chip=>chip.addEventListener('click',()=>{router.navigate(chip.dataset.cat?'/category/'+encodeURIComponent(chip.dataset.cat):'/blog');}));}
+  document.querySelectorAll('.faq-item').forEach(item=>item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open')));
+  const cf=document.getElementById('contactForm');
+  if(cf){cf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=document.getElementById('cName').value.trim(),email=document.getElementById('cEmail').value.trim(),msg=document.getElementById('cMessage').value.trim();
+    const ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!name||!msg||!ok){document.getElementById('contactError').style.display='block';return;}
+    document.getElementById('contactError').style.display='none';document.getElementById('contactSuccess').style.display='block';cf.reset();
+  });}
+  renderMethodFinder();renderBalanceChecker();
+}
+function render(){
+  const path=getPath();
+  document.getElementById('app').innerHTML=match(path).render();
+  document.querySelectorAll('nav.main-nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===path));
+  document.getElementById('mainNav').classList.remove('open');
+  attachHandlers();lazyLoad();
+}
+document.getElementById('footerNewsBtn').addEventListener('click',()=>{
+  const email=document.getElementById('footerNewsEmail').value;
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showToast('Enter a valid email');return;}
+  showToast('Subscribed!');document.getElementById('footerNewsEmail').value='';
+});
+document.getElementById('footerCats').innerHTML=CATS.map(c=>`<li><a href="/category/${encodeURIComponent(c)}" data-link>${c}</a></li>`).join('');
+document.getElementById('menuToggle').addEventListener('click',()=>document.getElementById('mainNav').classList.toggle('open'));
+window.addEventListener('scroll',()=>document.getElementById('backToTop').classList.toggle('show',window.scrollY>600));
+document.getElementById('backToTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+render();
+</script>
+</body>
+</html>
